@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { home, signIn, user } from "./Routes/Routes";
+import App from "./pages/Home/App";
+import SignIn from "./pages/SignIn/SignIn"
+import User from "./pages/User/User"
+import Error404 from "./pages/Error/Error"
+import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
+import "./index.scss"
+import { Provider } from "react-redux";
+import store from "./utils/store/Store.js";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// import Name from './pages/features/Name/Name.js'
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route element={<App />} path={home} /> 
+          <Route element={<SignIn />} path={signIn} />
+          <Route element={<User />} path={user} />
+          <Route element={<Error404 />} path="*" />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider> 
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
