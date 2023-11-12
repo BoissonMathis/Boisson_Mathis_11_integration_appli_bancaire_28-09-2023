@@ -13,13 +13,9 @@ export default function Name() {
   const firstname = useSelector(state => state.profile.firstName)
   const lastname = useSelector(state => state.profile.lastName)
   const token = useSelector(state => state.token.value)
-  // const error = useSelector(state => state.token.error)
-  // console.log(username)
 
   const [isVisible, setIsVisible] = useState(false);
   const [usernameValue, setUsernameValue] = useState('')
-  console.log(usernameValue)
-  console.log(username)
 
   const dispatch = useDispatch()
 
@@ -34,13 +30,11 @@ export default function Name() {
   }
 
   const editNewUsername = function() {
-
     if(usernameValue !== ""){
       dispatch(editUserName({
         token: token,
         userName: usernameValue
       }))
-
       setIsVisible(!isVisible)
     }else{
       document.getElementById('emptyFieldError')
@@ -81,7 +75,6 @@ export default function Name() {
         Cancel
         </button>
       </div>
-      {/* <p id="emptyFieldError" className='red'>*Empty field</p> */}
     </div>
   )
 }

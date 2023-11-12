@@ -20,7 +20,6 @@
 }
 
 .main-nav a, i{
-  font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
   font-style: normal;
@@ -32,6 +31,8 @@
 
 .main-nav-item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   margin-right: 0.5rem;
   gap: 10px;
@@ -39,6 +40,7 @@
 
 #logAndDelog:hover {
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .main-nav-logo {

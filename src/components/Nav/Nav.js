@@ -23,8 +23,8 @@ function Nav() {
       </NavLink>
         <h1 className="sr-only">Argent Bank</h1>
       <div className="main-nav-item">
-        {/* <p>test{username}</p> */}
-        <i className="fa fa-user-circle">{`${connected ? username : ""}`}</i>
+        <p>{`${connected ? username : ""}`}</p>
+        <i className="fa fa-user-circle"></i>
         <NavLink to={connected ? home : signIn}
         onClick={() => dispatch(logOut())}
         id="logAndDelog"

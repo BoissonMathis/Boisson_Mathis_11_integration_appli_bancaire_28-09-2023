@@ -16,10 +16,10 @@ export const postLogin = createAsyncThunk('login/postLogin',async(obj) =>{
   }
 })
 
-const login = createSlice({
-  name: 'token',
+const loginSlice = createSlice({
+  name: 'login',
   initialState: {
-      value: null,
+      token: null,
       error: '',
       loading: false,
       authenticated: false
@@ -35,7 +35,7 @@ const login = createSlice({
     })
     builder.addCase(postLogin.fulfilled,(state,action)=>{
       state.loading=false
-      state.value=action.payload
+      state.token=action.payload
       if(action.payload !== undefined){
         state.authenticated=true
       }
@@ -50,6 +50,6 @@ const login = createSlice({
   }
 });
 
-export default login.reducer;
+export default loginSlice.reducer;
 
-export const {logOut} = login.actions
+export const {logOut} = loginSlice.actions

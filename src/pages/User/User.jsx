@@ -14,11 +14,9 @@ function User() {
   const token = useSelector(state => state.token.value)
 
   useEffect(() => {
-
     if(connected === false){
       navigate(home)
     }
-
   },[connected, navigate])
 
   useEffect(() => {
@@ -33,8 +31,6 @@ function User() {
           <main className="main bg-dark">
             <div className="header">
               <Username />
-              {/* <h1>Welcome back<br />Tony Jarvis!</h1>
-              <button className="edit-button">Edit Name</button> */}
             </div>
             <h2 className="sr-only">Accounts</h2>
             <section className="account">

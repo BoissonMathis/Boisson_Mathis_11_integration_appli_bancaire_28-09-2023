@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { postLogin } from './tokenSlice'
+import { postLogin } from './loginSlice'
 import { useNavigate } from 'react-router-dom'
 
 export default function Connection() {
@@ -10,12 +10,11 @@ export default function Connection() {
 	const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const authenticated = useSelector(state => state.token.authenticated)
-  const error = useSelector(state => state.token.error)
+  const authenticated = useSelector(state => state.login.authenticated)
+  const error = useSelector(state => state.login.error)
 
   function postLoginSubmit(event) {
     event.preventDefault()
-
     dispatch(postLogin({
       email: usernameValue,
       password: passwordValue
