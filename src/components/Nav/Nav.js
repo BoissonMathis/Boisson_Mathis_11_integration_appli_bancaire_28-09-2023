@@ -29,7 +29,7 @@ function Nav() {
         onClick={() => dispatch(logOut())}
         id="logAndDelog"
         >
-          {`${connected ? "Sign Out" : "Sign In"}`}
+          {`${connected ? "Sign out" : "Sign in"}`}
         </NavLink>
       </div>
     </nav>

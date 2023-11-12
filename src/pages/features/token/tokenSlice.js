@@ -40,7 +40,7 @@ const login = createSlice({
         state.authenticated=true
       }
       else{
-        state.error="e-mail ou mdp incorrect"
+        state.error="incorrect password or email"
       }
     })
     builder.addCase(postLogin.rejected,(state,action)=>{
