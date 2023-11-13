@@ -1,10 +1,10 @@
 import "../Hero/Hero.scss";
-import bankThree from "../../img/bank-tree.jpeg"
+import bankTree from "../../img/bank-tree-2000.webp"
 
 function Hero() {
   return (
     <div className="hero">
-        <img src={bankThree} className="hero-background" alt="arbre de bank"/>
+        <img src={bankTree} className="hero-background" alt="arbre de bank"/>
         <section className="hero-content">
             <h2 className="sr-only">Promoted Content</h2>
             <p className="subtitle">No fees.</p>

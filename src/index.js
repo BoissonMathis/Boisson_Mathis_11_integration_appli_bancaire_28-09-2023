@@ -13,8 +13,6 @@ import "./index.scss"
 import { Provider } from "react-redux";
 import store from "./utils/store/Store.js";
 
-// import Name from './pages/features/Name/Name.js'
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <React.StrictMode>

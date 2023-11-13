@@ -1,7 +1,7 @@
 import "../Nav/Nav.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import logo from "../../img/argentBankLogo.png"
+import logo from "../../img/argentBankLogo.webp"
 import { home, signIn } from "../../Routes/Routes";
 import { logOut } from "../../pages/features/token/tokenSlice.js"
 
@@ -19,6 +19,8 @@ function Nav() {
           className="main-nav-logo-image"
           src={logo}
           alt="Argent Bank Logo"
+          height={"54"}
+          width={"200"}
         />
       </NavLink>
         <h1 className="sr-only">Argent Bank</h1>

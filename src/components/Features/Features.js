@@ -1,14 +1,19 @@
 import "./Features.scss"
-import iconMoney from "../../img/icon-money.png"
-import iconTchat from "../../img/icon-chat.png"
-import iconSecurity from "../../img/icon-security.png"
+import iconMoney from "../../img/icon-money.webp"
+import iconTchat from "../../img/icon-chat.webp"
+import iconSecurity from "../../img/icon-security.webp"
 
 function Features() {
     return (
         <section className="features">
             <h2 className="sr-only">Features</h2>
                 <div className="feature-item">
-                    <img src={iconTchat} alt="Chat Icon" className="feature-icon" />
+                    <img src={iconTchat} 
+                    alt="Chat Icon" 
+                    className="feature-icon"
+                    height={"100"}
+                    width={"151"} 
+                    />
                     <h3 className="feature-item-title">You are our #1 priority</h3>
                     <p>
                         Need to talk to a representative? You can get in touch through our
@@ -20,6 +25,8 @@ function Features() {
                         src={iconMoney}
                         alt="Chat Icon"
                         className="feature-icon"
+                        height={"100"}
+                        width={"151"} 
                     />
                     <h3 className="feature-item-title">More savings means higher rates</h3>
                     <p>
@@ -31,6 +38,8 @@ function Features() {
                         src={iconSecurity}
                         alt="Chat Icon"
                         className="feature-icon"
+                        height={"100"}
+                        width={"151"} 
                     />
                     <h3 className="feature-item-title">Security you can trust</h3>
                     <p>
