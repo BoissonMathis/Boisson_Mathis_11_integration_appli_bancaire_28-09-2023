@@ -1,53 +1,17 @@
 import "./Features.scss"
-import iconMoney from "../../img/icon-money.webp"
-import iconTchat from "../../img/icon-chat.webp"
-import iconSecurity from "../../img/icon-security.webp"
 
-function Features() {
+function Features(props) {
     return (
-        <section className="features">
-            <h2 className="sr-only">Features</h2>
-                <div className="feature-item">
-                    <img src={iconTchat} 
-                    alt="Chat Icon" 
-                    className="feature-icon"
-                    height={"100"}
-                    width={"151"} 
-                    />
-                    <h3 className="feature-item-title">You are our #1 priority</h3>
-                    <p>
-                        Need to talk to a representative? You can get in touch through our
-                        24/7 chat or through a phone call in less than 5 minutes.
-                    </p>
-                </div> 
-                <div className="feature-item">
-                    <img
-                        src={iconMoney}
-                        alt="Chat Icon"
-                        className="feature-icon"
-                        height={"100"}
-                        width={"151"} 
-                    />
-                    <h3 className="feature-item-title">More savings means higher rates</h3>
-                    <p>
-                        The more you save with us, the higher your interest rate will be!
-                    </p>
-                </div>
-                <div className="feature-item">
-                    <img
-                        src={iconSecurity}
-                        alt="Chat Icon"
-                        className="feature-icon"
-                        height={"100"}
-                        width={"151"} 
-                    />
-                    <h3 className="feature-item-title">Security you can trust</h3>
-                    <p>
-                        We use top of the line encryption to make sure your data and money
-                        is always safe.
-                    </p>
-                </div>
-        </section>
+        <div className="feature-item">
+            <img src={props.src}
+            alt={props.alt} 
+            className="feature-icon"
+            height={"100"}
+            width={"151"} 
+            />
+            <h3 className="feature-item-title"> {props.title} </h3>
+            <p> {props.p} </p>
+        </div>
     );
   }
 

@@ -43,7 +43,7 @@ export default function Name() {
 
   return (
     <div>
-      <h1 className={`center ${isVisible ? "invisible" : "visible"}`} key={ username }>Welcome back<br />{ username } !</h1>
+      <h1 className={`center ${isVisible ? "invisible" : "visible"}`} key={ username } > Welcome back<br />{ username } ! </h1>
       <h1 className={`center ${isVisible ? "visible" : "invisible"}`} >Edit your profile</h1>
       <div className={`editProfileDiv ${isVisible ? "visible" : "invisible"}`}>
         <div className='editTextInput'>

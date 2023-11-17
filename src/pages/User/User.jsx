@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { home } from "../../Routes/Routes";
 import { fetchProfile } from '../features/Profile/profileSlice.js'
 import Username from '../features/Profile/profile.js'
+import Bankaccount from '../../components/Bankaccount/Bankaccount.js'
+import { bankaccountInfos } from '../../components/Bankaccount/BankaccountInfo.js';
 import "../Style.scss"
 
 function User() {
@@ -33,36 +35,9 @@ function User() {
               <Username />
             </div>
             <h2 className="sr-only">Accounts</h2>
-            <section className="account">
-              <div className="account-content-wrapper">
-                <h3 className="account-title">Argent Bank Checking (x8349)</h3>
-                <p className="account-amount">$2,082.79</p>
-                <p className="account-amount-description">Available Balance</p>
-              </div>
-              <div className="account-content-wrapper cta">
-                <button className="transaction-button">View transactions</button>
-              </div>
-            </section>
-            <section className="account">
-              <div className="account-content-wrapper">
-                <h3 className="account-title">Argent Bank Savings (x6712)</h3>
-                <p className="account-amount">$10,928.42</p>
-                <p className="account-amount-description">Available Balance</p>
-              </div>
-              <div className="account-content-wrapper cta">
-                <button className="transaction-button">View transactions</button>
-              </div>
-            </section>
-            <section className="account">
-              <div className="account-content-wrapper">
-                <h3 className="account-title">Argent Bank Credit Card (x8349)</h3>
-                <p className="account-amount">$184.30</p>
-                <p className="account-amount-description">Current Balance</p>
-              </div>
-              <div className="account-content-wrapper cta">
-                <button className="transaction-button">View transactions</button>
-              </div>
-            </section>
+              <Bankaccount title={bankaccountInfos[0].title} balance={bankaccountInfos[0].balance} balanceDescription={bankaccountInfos[0].balanceDescription}/>
+              <Bankaccount title={bankaccountInfos[1].title} balance={bankaccountInfos[1].balance} balanceDescription={bankaccountInfos[1].balanceDescription}/>
+              <Bankaccount title={bankaccountInfos[2].title} balance={bankaccountInfos[2].balance} balanceDescription={bankaccountInfos[2].balanceDescription}/>
           </main>
         </div>
       </div>

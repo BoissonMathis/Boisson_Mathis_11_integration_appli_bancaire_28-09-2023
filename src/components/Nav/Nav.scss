@@ -38,6 +38,12 @@
   gap: 10px;
 }
 
+.main-nav-item p:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 #logAndDelog:hover {
   text-decoration: underline;
   font-weight: bold;
